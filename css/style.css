@@ -103,7 +103,7 @@ img {
 #contents {
 	background: url(../images/bg-content.png) repeat-x center top;
 	margin: 0 0 24px;
-	padding: 56px 0 0;
+	padding: 100px 0 0;
 }
 #contents h1, #featured h3 {
 	color: #fbfdfd;
@@ -212,7 +212,7 @@ img {
 	padding: 0;
 }
 #sidebar > ul li {
-	margin: 0 0 16px;
+	margin: 150 0 16px;
 }
 #sidebar > ul li img {
 	border: 4px solid #fff;
@@ -308,7 +308,7 @@ img {
 #gallery .photos > ul li a:hover span.cover {
 	background-color: #e8eff4;
 	display: block;
-	height: 96px;
+	height: 128px;
 	width: 100%;
 	opacity: 0.49;
 	position: absolute;
