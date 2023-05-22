@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RegisterLogin</title>
+    <style>
+        body{
+            background-image: url(./images/bg-body.jpg);
+            background-repeat:repeat;
+        }
+        h1{
+            color:red;
+            text-align:center;
+        }
+        .container {
+            text-align: center;
+        }
+    </style>
+    <script>
+        // Register
+        function register() {
+            var username = document.getElementById('reg-username').value;
+            var password = document.getElementById('reg-password').value;
+
+            // Store user's information to local storage
+            localStorage.setItem('username', username);
+            localStorage.setItem('password', password);
+
+            console.log('Register successful');
+            alert('Register successful');
+            window.location.href = 'Login.html';
+        }
+
+
+    </script>
+</head>
+
+<body>
+<div id="logo">
+    <a href="index.html"><img src="images/logo.png" alt="LOGO"></a>
+</div>
+<h1>Register</h1>
+<div class="container">
+    <input type="text" id="reg-username" placeholder="Username">
+    <input type="password" id="reg-password" placeholder="Password">
+    <button onclick="register()">Register</button>
+</div>
+
+
+</body>
+</html>
+
+

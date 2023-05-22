@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <style>
+        body{
+            background: url(./images/bg-body.jpg) repeat left top;
+        }
+        h1{
+            color:red;
+            text-align:center;
+        }
+        .container {
+            text-align: center;
+        }
+
+    </style>
+    <script>
+        // Login
+        function login() {
+            var username = document.getElementById('login-username').value;
+            var password = document.getElementById('login-password').value;
+
+            // Get user's information from local storage'
+            var savedUsername = localStorage.getItem('username');
+            var savedPassword = localStorage.getItem('password');
+
+            // Verify username and password
+            if (username === savedUsername && password === savedPassword) {
+                alert('Login Successful');
+                window.location.href = 'index1.html';
+            } else {
+                alert('Username or password is wrong!');
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="logo">
+    <a href="index.html"><img src="images/logo.png" alt="LOGO"></a>
+</div>
+
+<h1>Login</h1>
+<div class="container">
+    <input type="text" id="login-username" placeholder="Username">
+    <input type="password" id="login-password" placeholder="Password">
+    <button onclick="login()">Login</button>
+</div>
+
+</body>
+</html>
+
+
