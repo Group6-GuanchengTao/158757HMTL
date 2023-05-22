@@ -14,8 +14,8 @@
 			}
 		</style>
 		<script>
-			function GetData() {
-			
+			function GetData(event) {
+				event.preventDefault();
 				const name = localStorage.getItem('Name');
 				const age=localStorage.getItem('Age');
 				const gender=localStorage.getItem('Gender');
@@ -38,7 +38,21 @@
 
 
 
-	<button onclick="GetData()">Show</button>
+	<form id="myForm">
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="nameInput" required>
+
+    <label for="age">Age:</label>
+    <input type="number" name="age" id="ageInput" required>
+
+    <label for="gender">Gender:</label>
+    <input type="text" name="gender" id="genderInput" required>
+
+    <label for="starName">StarName:</label>
+    <input type="text" name="starName" id="starNameInput" required>
+
+    <button type="submit" onclick="func(event)">Show</button>
+  </form>
 	<h2>Name: <span id="name"></span></h2>
 	<h2>Age: <span id="age"></span></h2>
 	<h2>Gender: <span id="gender"></span></h2>
