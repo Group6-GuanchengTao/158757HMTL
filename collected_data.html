@@ -15,8 +15,8 @@
 			}
 		</style>
 		<script>
-			function GetData(event) {
-				event.preventDefault();
+			function GetData() {
+				
 				const name = localStorage.getItem('Name');
 				const age=localStorage.getItem('Age');
 				const gender=localStorage.getItem('Gender');
@@ -39,7 +39,7 @@
 
 
 
-	<button onclick="GetData(event)">Show</button>
+	<button onclick="GetData()">Show</button>
 	<h2>Name: <span id="name"></span></h2>
 	<h2>Age: <span id="age"></span></h2>
 	<h2>Gender: <span id="gender"></span></h2>
