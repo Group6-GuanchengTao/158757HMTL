@@ -2,19 +2,55 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title></title>
-		<script src="task6.js"></script>
+		<title>Find the data</title>
+		<style>
+			body{
+				background-image: url(./images/bg-body.jpg);
+				background-repeat:repeat;
+
+			}
+			h1, h2{
+				color:red;
+			}
+		</style>
+		<script>
+			function func() {
+			//	var url=new URLSearchParams(window.location.search);
+			//	var name = url.get('Name');
+			//	var age = url.get('Age');
+			//	var gender = url.get('Gender');
+			//	var starName = url.get('StarName');
+				const name = localStorage.getItem('Name');
+				const age=localStorage.getItem('Age');
+				const gender=localStorage.getItem('Gender');
+				const starName=localStorage.getItem('StarName');
+
+				// Show the results
+				document.getElementById('name').textContent = name;
+				document.getElementById('age').textContent = age;
+				document.getElementById('gender').textContent = gender;
+				document.getElementById('starName').textContent = starName;
+				alert('Data has been found!');
+
+			}
+		</script>
 	</head>
 	<body>
-		
-		<h3 id="array"></h3>
-		<input type="text" id = "input"><br>
+<!--	<h1> Data Collected</h1>
+	<button onclick="GetData()">Show</button>
+	<h2>Name: <span id="name"></span></h2>
+	<h2>Age: <span id="age"></span></h2>
+	<h2>Gender: <span id="gender"></span></h2>
+	<h2>StarName: <span id="StarName"></span></h2> -->
 
-		<button onclick="created()">Show</button>
+		<h1> Find your star information here</h1>
 
-	</body>
+
+
+	<button onclick="func()">Show</button>
+	<h2>Name: <span id="name"></span></h2>
+	<h2>Age: <span id="age"></span></h2>
+	<h2>Gender: <span id="gender"></span></h2>
+	<h2>StarName: <span id="starName"></span></h2>
+
 </html>
-
-<script>
-
-</script>
