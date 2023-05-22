@@ -4,16 +4,33 @@
 	<title>Adopt - Astronomy</title>
 	<embed src="To the moon.mp3" hidden="true" autostart="true" loop="true">
 	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<script>
+		function Transfer() {
+
+			const name = document.getElementById('Name').value;
+			const age = document.getElementById('Age').value;
+			const gender = document.getElementById('Gender').value;
+			const starName=document.getElementById('StarName').value;
+
+			// Store the data to local storage
+			localStorage.setItem('Name', name);
+			localStorage.setItem('Age', age);
+			localStorage.setItem('Gender', gender);
+			localStorage.setItem('StarName', starName);
+			alert('Submit Successfully');
+			//window.location.href="collected_data.html";
+		}
+	</script>
 </head>
 <body>
 	<div id="header">
 		<div class="wrapper clearfix">
 			<div id="logo">
-				<a href="index.html"><img src="images/logo.png" alt="LOGO"></a>
+				<a href="index1.html"><img src="images/logo.png" alt="LOGO"></a>
 			</div>
 			<ul id="navigation">
 				<li>
-					<a href="index.html">Home</a>
+					<a href="index1.html">Home</a>
 				</li>
 				<li>
 					<a href="about.html">About</a>
@@ -48,7 +65,7 @@
 			</div>
 			<div class="main">
 				<h1>Adopt a star</h1>
-				<form action="collected_data.html" method="post">
+				<form action="collected_data.html" method="post">  <!--  -->
 					<ul>
 						<p>
 							You can use this page to participate in our Adopt-a-Star program and freely name your adopted star.      The purpose of this donation campaign is to provide financial support for our exploration and promote human exploration and development in the universe.
@@ -62,30 +79,27 @@
 							Your generous donation will be an important impetus for mankind to pursue the space dream.      Let us join hands and jointly open up a broader future of space exploration.
 						</p>
 						<li>
+							<label>Enter your name.</label>
+							<input type="text" id="Name" placeholder="name">
+						</li>
+						<li>
 							<label>Enter your age here.</label>
-							<input type="text" value="age" onBlur="javascript:if(this.value==''){this.value=this.defaultValue;}" onFocus="javascript:if(this.value==this.defaultValue){this.value='';}">
+							<input type="text" id="Age" placeholder="age">
 						</li>
 						<li>
 							<label>Enter your gender here.</label>
-							<input type="text" value="gender" onBlur="javascript:if(this.value==''){this.value=this.defaultValue;}" onFocus="javascript:if(this.value==this.defaultValue){this.value='';}">
-						</li>
-						<li>
-							<label>Enter how much to donate.</label>
-							<input type="text" value="money" onBlur="javascript:if(this.value==''){this.value=this.defaultValue;}" onFocus="javascript:if(this.value==this.defaultValue){this.value='';}">
+							<input type="text" id="Gender" placeholder="gender">
 						</li>
 						<li>
 							<label>Enter the name of your star here.</label>
-							<input type="text" value="name of star" onBlur="javascript:if(this.value==''){this.value=this.defaultValue;}" onFocus="javascript:if(this.value==this.defaultValue){this.value='';}">
+							<input type="text" id="StarName" placeholder="StarName">
 						</li>
 						<li>
-							<label class="msg">Enter your feedback to us.</label>
-							<textarea onBlur="javascript:if(this.value==''){this.value=this.defaultValue;}" onFocus="javascript:if(this.value==this.defaultValue){this.value='';}">Feedback</textarea>
+							<label>Description for the stars.</label>
+							<textarea>Feedback</textarea>
 							<!-- <input type="submit" value="collect_date.html" class="btn3"> -->
-							<input type="submit" value="Submit" formtarget="_blank" class="btn3">
-<script>
-
-</script>
-						</li>
+							<button onclick="Transfer()"> Submit</button>
+		</li>
 					</ul>
 				</form>
 			</div>
