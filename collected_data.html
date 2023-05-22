@@ -5,7 +5,7 @@
 		<title>Find the data</title>
 		<style>
 			body{
-				background-image: url(/images/bg-body.jpg);
+				background-image: url(./images/bg-body.jpg);
 				background-repeat:repeat;
 
 			}
@@ -14,12 +14,8 @@
 			}
 		</style>
 		<script>
-			function func() {
-			//	var url=new URLSearchParams(window.location.search);
-			//	var name = url.get('Name');
-			//	var age = url.get('Age');
-			//	var gender = url.get('Gender');
-			//	var starName = url.get('StarName');
+			function GetData() {
+			
 				const name = localStorage.getItem('Name');
 				const age=localStorage.getItem('Age');
 				const gender=localStorage.getItem('Gender');
@@ -36,21 +32,16 @@
 		</script>
 	</head>
 	<body>
-<!--	<h1> Data Collected</h1>
-	<button onclick="GetData()">Show</button>
-	<h2>Name: <span id="name"></span></h2>
-	<h2>Age: <span id="age"></span></h2>
-	<h2>Gender: <span id="gender"></span></h2>
-	<h2>StarName: <span id="StarName"></span></h2> -->
+
 
 		<h1> Find your star information here</h1>
 
 
 
-	<button onclick="func()">Show</button>
+	<button onclick="GetData()">Show</button>
 	<h2>Name: <span id="name"></span></h2>
 	<h2>Age: <span id="age"></span></h2>
 	<h2>Gender: <span id="gender"></span></h2>
 	<h2>StarName: <span id="starName"></span></h2>
-
+</body>
 </html>
