@@ -4,6 +4,16 @@
 	<title>Astronomy Website</title>
 	<embed src="To the moon.mp3" hidden="true" autostart="true" loop="true">
 	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<script>
+		function Login(){
+			window.location.href='Login.html';
+		}
+	</script>
+	<script>
+		function SignUp(){
+			window.location.href='Register.html';
+		}
+	</script>
 </head>
 <body>
 	<div id="header">
@@ -32,7 +42,66 @@
 				</li>
 			</ul>
 		</div>
-	</div>
+		
+	<!--	/*登陆注册*/      -->
+		<div class="user-log" onClick="Login()">Log in</div>
+		<div class="user-sign" onClick="SignUp()">Sign up</div>
+		</div>
+	<!--	/*登陆框*/   -->
+		<div class="log-box">
+		  <div class="log-welcome">WELCOME BACK</div>
+		  <table>
+            <tr>
+              <td style="position:absolute; height:60px; top:110px; left:90px; color: white; font-size: 18px; font-weight: 500;">Account ID ：
+              <input type="text"  name="Account" style="width: 200px; height: 25px; top: 5px; border: #ffedc0; text-indent: 1em; "><br></td>
+           </tr>
+           <tr>     
+             <td style="position:absolute; height:60px; top:170px; left:104px; color: white; font-size: 18px; font-weight: 500;">Password：
+             <input type="Password"  name="pwd" style="width: 200px; height: 25px; top: 10px; border: #ffedc0;text-indent: 1em; " ><br></td>
+           </tr>
+		   </tr>
+             <td style="height:50px;">
+             <button (click)="getLogin()" class="frozen green" style="position:absolute; width:100px; height:40px; top:270px; left:130px; color: #065C9B; background-color: white; font-size: 15px; font-weight: 800; border-color: #065C9B; box-shadow: 0px 3px 10px black">Login</button>
+             <button onClick="history.go(0)" class="frozen green" style="position: absolute; width: 100px; height: 40px; top:270px; left:290px; color: #065C9B; background-color: white; font-size: 15px; font-weight: 800; border-color: #065C9B; box-shadow: 0px 3px 10px black">Back</button>
+		   </tr>
+          </td>
+         </table> 
+	     <div class="log-text">Don't have an account? Register now!</div>
+		</div>
+
+       <!-- / *注册框*/ -->
+        <div class="sign-box">
+			<div class="log-welcome">WELCOME</div>
+			  <div class="tablebox">
+                  <table>
+                     <tr>
+                         <td style="position: absolute; height: 50px; top: 90px; left: 100px; color: white; font-size: 16px; font-weight: 500;">Account ID：
+                         <input type="text"  name="Account" style="width: 180px; height: 25px; top: 10px; border: #ffedc0;"><br></td>
+                     </tr>
+                     <tr>
+                         <td style="position: absolute; height: 50px; top: 140px; left: 100px; color: white; font-size: 16px; font-weight: 500;">Name：
+                         <input type="text"  name="Name" style="width: 220px; height: 25px; top: 10px; border: #ffedc0;"><br></td>         
+                     </tr>
+                     <tr>     
+                         <td style="position: absolute; height: 60px; top: 190px; left: 100px; color: white; font-size: 16px; font-weight: 500;">Password：
+                         <input type="password"  name="pwd" style="width: 193px; height: 25px; top: 10px; border: #ffedc0;" ><br></td>
+                     </tr>
+                     <tr>     
+                         <td style="position: absolute; height: 60px; top: 240px; left: 100px; color: white; font-size: 16px; font-weight: 500;">Email：
+                         <input type="text"  name="Email" style="width: 225px; height: 25px; top: 10px; border: #ffedc0;" ><br></td>
+                     </tr>
+                     <td style="height:50px;">
+                         <button (click)="getSignup() "class="frozen green"  style="position:absolute; width:90px; height:35px; top:295px; left:140px; color: #065C9B; background-color: white; font-size: 15px; font-weight: 800; border-color: #065C9B; box-shadow: 0px 3px 10px black">SignUp</button>
+                         <button onClick="history.go(0)" class="frozen green" style="position:absolute; width:90px; height:35px; top:295px; left:280px; color: #065C9B; background-color: white; font-size: 15px; font-weight: 800; border-color: #065C9B; box-shadow: 0px 3px 10px black">Back</button>
+                     </td>     
+                </table>         
+   </div>
+			
+			
+		</div>
+		
+		
+	
 	<div id="contents">
 		<div id="adbox">
 			<div class="wrapper clearfix">
@@ -151,7 +220,7 @@
 						</ul>
 					</div>
 				</div>
-				<div id="newsletter">
+			<!--	<div id="newsletter">
 					<h4>Newsletter</h4>
 					<p>
 						Sign up for Our Newsletter
@@ -160,7 +229,7 @@
 						<input type="text" value="">
 						<input type="submit" value="Sign Up!">
 					</form>
-				</div>
+				</div> -->
 				<p class="footnote">
 					Contact us at: <a href="mailto:Contact@frocheer.gov.com">Contact@frocheer.gov.com</a>
 				</p>
