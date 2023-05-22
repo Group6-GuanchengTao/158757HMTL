@@ -5,10 +5,11 @@
 		<title>Find the data</title>
 		<style>
 			body{
-				
+				background: url(../images/bg-body.jpg) repeat left top;
 				background-repeat:repeat;
 
 			}
+			
 			h1, h2{
 				color:red;
 			}
@@ -38,21 +39,7 @@
 
 
 
-	<form id="myForm">
-    <label for="name">Name:</label>
-    <input type="text" name="name" id="nameInput" required>
-
-    <label for="age">Age:</label>
-    <input type="number" name="age" id="ageInput" required>
-
-    <label for="gender">Gender:</label>
-    <input type="text" name="gender" id="genderInput" required>
-
-    <label for="starName">StarName:</label>
-    <input type="text" name="starName" id="starNameInput" required>
-
-    <button type="submit" onclick="GetData(event)">Show</button>
-  </form>
+	<button onclick="GetData(event)">Show</button>
 	<h2>Name: <span id="name"></span></h2>
 	<h2>Age: <span id="age"></span></h2>
 	<h2>Gender: <span id="gender"></span></h2>
